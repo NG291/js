@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tính điểm trung bình</title>
+</head>
+<body>
+ <script>
+     let  inputphysics
+     let inputchemistry
+     let inputbiology
+     inputphysics= prompt("input score physics");
+     inputchemistry= prompt("input score chemistry");
+     inputbiology= prompt("input score biology");
+      let Physysics= parseInt(inputphysics);
+      let Chemistry= parseInt(inputchemistry);
+      let Biology= parseInt(inputbiology);
+      let sum= Physysics + Chemistry +Biology;
+      let result = (Physysics + Chemistry +Biology)/3;
+      document.write( 'Tổng điểm hóa,lý, sinh là:' +sum)
+      document.write('<br/>');
+      document.write( 'Điểm trung bình: hóa,lý, sinh là:' +result)
+      document.write('<br/>');
+
+ </script>
+</body>
+</html>
