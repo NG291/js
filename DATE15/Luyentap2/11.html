@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuế thu nhập</title>
+</head>
+<body>
+<script>
+    let thue=+prompt('Thu nhập hàng tháng của bạn là!')
+    let Tien=null;
+    if(thue<=10){
+        Tien=thue*(0.05);
+        alert("Tiền thuế bạn là 5%:"+Tien)
+    }
+    else if(thue>10&&thue<=30){
+        Tien=(thue-10)*0.1+(0.05)*10;
+        alert("Tiền thuế bạn là 10%:"+Tien)
+    }
+    else if(thue>30&&thue<=50){
+        Tien=(thue-30)*0.15+(0.05)*10+(0.1)*20
+        alert("Tiền thuế bạn là 15%:"+ Tien)
+    }
+   else {
+       Tien=(thue-50)*0.2+(0.05)*10+(0.1)*20+(0.15)*20;
+        alert("Tiền thuế bạn là 20%:"+Tien)
+    }
+
+</script>
+</body>
+</html>

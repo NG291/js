@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ </title>
+</head>
+<body>
+<div>
+    <p>Amount</p>
+    <input type="text" id="put"/>
+ </div>
+<div>
+    <p>From Curency</p>
+    <select id="USD">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+    </select>
+    <select id="VND">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+    </select>
+    <button id="btn"> Nhấn</button>
+ </div>
+<p id="IN"></p>
+<script>
+    document.getElementById('btn').onclick=function () {
+        let X=document.getElementById('put').value;
+        let Y=document.getElementById('USD').value;
+        let Z=document.getElementById('VND').value;
+        let resurl
+        if(Y=='USD'&&Z=='VND'){
+            resurl=X*23000
+        }
+        else if(Y=='VND'&&Z== 'USD'){
+           resurl=X/23000;
+        }
+        else
+        {
+            resurl=X*1;
+        }
+
+
+
+document.getElementById('IN').innerHTML=resurl;
+    }
+</script>
+</body>

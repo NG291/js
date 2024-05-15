@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng</title>
+<!--    Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ-->
+</head>
+<body>
+<script>
+    let DkiemTra = +prompt('Nhập điểm kiểm tra:');
+    let DGiuaKy = +prompt('Nhập Giữa kỳ:');
+    let DCuoiKy = +prompt('Nhập điểm Cuối kì:');
+    let DTB= (DkiemTra+DGiuaKy*2+DCuoiKy*3)/6;
+    if(DTB<=5){
+        alert('Xếp loại yếu')
+    }
+
+    else if(5<DTB&&DTB<7){
+        alert('Xếp loại trung bình')
+    }
+    else if(DTB>=7&& DTB<=8)
+        {
+        alert('Xếp loại khá ');
+    }
+    else{
+        alert('Xếp loại giỏi')
+    }
+    </script>
+</body>
+</html>

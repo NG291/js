@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm Max</title>
+</head>
+<!--Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó-->
+<body>
+ <script>
+     let A= +prompt('Nhập số A')
+     let B= +prompt('Nhập số B')
+     let C= +prompt('Nhập số C')
+     let Max=A;
+     if(B>A){
+         Max=B;
+         if(B>C){
+             alert('Số lớn nhất là:B');
+             alert(Max)
+
+         }
+         else{
+             Max=C
+             alert('Số lớn nhất là C:');
+             alert(Max)
+         }
+     }
+      else if(C>A){
+         Max=C
+         alert('Số lớn nhất là C:');
+         alert(Max)
+     }
+     else{
+         alert('Số lớn nhất là A:');
+         alert(Max)
+     }
+
+ </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <img src="goku.png" alt="" style="width: 100px; top:100px;left:0px;position:absolute;" id="X" >
+<!--<button onclick="Phai()"> Sang phai</button>-->
+<!--<button onclick="Tren()"> Lên trên</button>-->
+<!--<button onclick="Duoi()"> Xuống dưới</button>-->
+<!--<button onclick="Trai()"> Sang Trái</button>-->
+<script>
+    // function Phai(){
+    //     let anh =document.getElementById('X');
+    //     anh.style.left=parseInt(anh.style.left)+20 +'px';
+    // } function Tren(){
+    //     let anh =document.getElementById('X');
+    //     anh.style.top=parseInt(anh.style.top) -20 +'px';
+    // } function Duoi(){
+    //     let anh =document.getElementById('X');
+    //     anh.style.top=parseInt(anh.style.top) +20 +'px';
+    // } function  Trai(){
+    //     let anh =document.getElementById('X');
+    //     anh.style.left=parseInt(anh.style.left) -20 +'px';
+    // }
+
+
+    // setInterval(()=> {
+    //     let anh= document.getElementById('X')
+    //     let currentLeft =parseInt(anh.style.left)
+    //     if( currentLeft >=0 && currentLeft < 800){
+    //         anh.style.left=currentLeft + 1+ "px";
+    //     }
+    //     else {
+    //         anh.style.left="0px";
+    //     }
+
+    // },1);
+    let a = 1;
+    setInterval(() => {
+        let anh = document.getElementById('X');
+        let currentLeft = parseInt(anh.style.left);
+        if (currentLeft < 0 || currentLeft > 800) {
+            a=(-a);
+        }
+        currentLeft += a;
+        anh.style.left = currentLeft + "px";
+    }, 1);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giá cước</title>
+</head>
+<!--Tính cước điện thoại cho một hộ gia đình với các thông số đã cho-->
+<body>
+<script>
+    let Phut =+prompt('Nhập số phút bạn gọi')
+    let Gia=null;
+    if( Phut<=2){
+        alert('Giá cước cuộc gọi của ban hết 1000VND/phút')
+        Gia=Phut*1000
+        alert(Gia +"VND")
+    } else if( Phut>2&& Phut<=5){
+        alert('Giá cước cuộc gọi của ban hết 1500VND/phút')
+        Gia=(Phut-2)*1500+2*1000
+        alert(Gia +"VND")
+    } else{
+        alert('Giá cước cuộc gọi của ban hết 3000VND/phút')
+        Gia= (Phut-5)*3000 +3000+1500+2*1000
+        alert(Gia +"VND")
+    }
+</script>
+</body>
+</html>

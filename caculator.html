@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+   <style>
+
+       .one input{
+           width: 50px;
+       }
+       #hei{
+           width: 215px;
+       }
+
+   </style>
+</head>
+<body>
+<div class="calculator">
+     <input type="button" id="Display">
+    <table class="one">
+      <tr>
+          <td> <input type="button" value="(" onclick="clearDisplay('(')"></td>
+          <td> <input type="button" value=")" onclick="appendToDisplay(')')"></td>
+          <td> <input type="button" value="%" onclick="appendToDisplay('%')" ></td>
+          <td> <input type="button" value="AC" onclick="clearDisplay()"></td>
+      </tr>
+        <tr>
+          <td> <input type="button" value="7" onclick="appendToDisplay('7')"></td>
+          <td> <input type="button" value="8" onclick="appendToDisplay('8')"></td>
+          <td> <input type="button" value="9" onclick="appendToDisplay('9')"></td>
+          <td> <input type="button" value="/" onclick="appendToDisplay('/')"></td>
+      </tr>
+        <tr>
+          <td> <input type="button" value="4" onclick="appendToDisplay('4')"></td>
+          <td> <input type="button" value="5" onclick="appendToDisplay('5')"></td>
+          <td> <input type="button" value="6" onclick="appendToDisplay('6')"></td>
+          <td> <input type="button" value="*" onclick="appendToDisplay('*')"></td>
+      </tr>
+        <tr>
+          <td> <input type="button" value="1" onclick="appendToDisplay('1')"></td>
+          <td> <input type="button" value="2" onclick="appendToDisplay('2')"></td>
+          <td> <input type="button" value="3" onclick="appendToDisplay('3')"></td>
+          <td> <input type="button" value="-" onclick="appendToDisplay('-')"></td>
+      </tr>
+        <tr>
+          <td> <input type="button" value="0" onclick="appendToDisplay('0')"></td>
+          <td> <input type="button" value="." onclick="appendToDisplay('.')"></td>
+          <td> <input type="button" value="=" onclick="calculate()"></td>
+          <td> <input type="button" value="+" onclick="appendToDisplay('+')"></td>
+      </tr>
+    </table>
+    <script>
+        function appendToDisplay(value){
+            document.getElementById('Display').value +=value;
+        }
+        function clearDisplay(){
+            document.getElementById("Display").value = "";
+        }
+        function calculate() {
+            var expression = document.getElementById("Display").value;
+            var result = eval(expression);
+            document.getElementById("Display").value = result;
+        }
+    </script>
+</div>
+</body>
+</html>

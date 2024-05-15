@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+<script>
+let a=+prompt('Nhập giá trị a')
+let b=+prompt('Nhập giá trị b')
+let c=+prompt('Nhập giá trị c')
+if(a==0){
+    if(b==0){
+        if(c==0)
+        {
+            alert('phương trinh vô số nghiệm')
+        }
+        else {
+            alert('phương trình vô nghiệm')
+        }
+    }
+    else {
+        if(c==0){
+            alert('phương trình vô số nghiệm')
+        }
+        else{
+            alert('phương trình có một nghiệm là: '+ -b/c)
+        }
+    }
+}
+else {
+    let delta= b*b-4*a*c
+    if(delta>0){
+        alert('Phương trình có 2 nghiệm')
+       let X1=  (-b + Math.sqrt(delta)) / (2 * a);
+       let X2=  (-b - Math.sqrt(delta)) / (2 * a);
+        alert('Nghiệm X1:'+X1);
+        alert('Nghiệm X2:'+X2);
+    }
+    else if(delta==0)
+    {
+        alert('Phương trình có nghiệm là :'+ -b/(2*a) )
+    }
+    else{
+        alert('Phương trình vô nghiệm')
+    }
+}
+</script>
+</body>
+</html>

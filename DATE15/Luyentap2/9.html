@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xác thực tam hình tam giác</title>
+</head>
+<body>
+ <script>
+     let a=+prompt('Nhập độ dài cạnh a')
+     let b=+prompt('Nhập độ dài cạnh b')
+     let c=+prompt('Nhập độ dài cạnh c')
+     if(a,b,c>0){
+             if(a+b>c) {
+                 if (b + c > a) {
+                     if (a + c > b) {
+                         alert('Ba cạnh tạo thành một tam giác')
+                     } else {
+                         alert(' Ba cạnh Không tạo là tam giác')
+                     }
+                 } else {
+                     alert('Ba cạnh Không tạo là tam giác')
+                 }
+             }
+
+             else {
+                 alert('Ba cạnh Không tạo là tam giác')
+             }
+         }
+     else {
+         alert('Ba cạnh Không tạo là tam giác')
+     }
+ </script>
+</body>
+</html>

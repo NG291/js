@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Giá điện</title>
+</head>
+<body>
+<script>
+
+    let So=+ prompt('Số diện bạn đã sử dụng: ');
+    let Dgia=null;
+                    if(So<=50)
+                    {
+                        alert('Dơn giá số điện là: 1600/1số ');
+                        Dgia= So*1600
+                        alert( 'Số tiền là:'+ Dgia +'VND')
+                    }
+                    else if(So>50 &&So<=300) {
+                        alert('Dơn giá số điện là: 3000/1số ');
+                        Dgia= (So-50)*3000+50*1600
+                        alert( 'Số tiền điện là:'+Dgia +'VND')
+                    }
+                    else {
+                        alert('Dơn giá số điện là: 5000/1số ');
+                        Dgia= (So-300)*5000+250*3000+50*1600;
+                        alert( 'Số tiền điện:'+ Dgia +'VND')
+                    }
+</script>
+</body>
+</html>
